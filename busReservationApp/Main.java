@@ -377,7 +377,12 @@ public class Main {
 					}
 			        System.out.println("ENTER BUS NO");
 			        int busNum=sc.nextInt();
+			        if (busAvailability.containsKey(busNum)) {
 			        busAvailability.get(busNum).showBusDetails();
+			        }
+			        else {
+			        	System.out.println("Invalid bus number");
+			        }
 			        break;
 			    case(14):
 			    	adminLogin.get(adminuser).logout();
