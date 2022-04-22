@@ -83,8 +83,7 @@ public class Main {
 			    		
 			    	}
 			   
-			        if(loginuser>=0) {			        	
-				        
+			        if(loginuser>=0) {			        			        
 //				        LoginUser details=new LoginUser();//passenger class
 				        int busNo = 0;
 				        int noOfSeatsRequired=0;
@@ -105,7 +104,6 @@ public class Main {
 					        		busNo=passenger.getBusNo();
 					        		break;
 					        	}
-
 				                break;
 				            case(2):
 					        	String complaint=customerLogin.get(loginuser).customerComplaint();
@@ -195,6 +193,7 @@ public class Main {
 			    		    while(true) {
 			    		    System.out.println("verify phone number");
 			    		    long phoneNumberVerify=sc.nextLong();
+			    		    sc.nextLine();
 			    		    System.out.println("verify mail id");
 			    		    String mail=sc.nextLine();
 			    		    if(phoneNumberVerify==phNo && mailId.equals(mail)) {
@@ -250,8 +249,6 @@ public class Main {
 				}
 				System.out.println(adminuser);
 		        if(adminuser>=0) {
-			       
-	
 			    boolean adminLogout=true;
 			    while(adminLogout) {
 			        System.out.println("1.SET DISCOUNT\n2.SET BUS\n3.CHANGE PROFILE\n4.ADD BUS\n5.VIEW COMPLAINT\n6.VIEW FEEDBACK\n7.VIEW PASSENGER DETAILS\n8.SET EMPLOYEE DETAILS\n9.VIEW EMPLOYEE DETAILS\n10.PAY SALARY\n11.ADD EMPLOYEE\n12.PUT ATTENDENCE\n.13 SHOW BUS DETAILS\n14.LOGOUT");
