@@ -502,8 +502,6 @@ public class Main {
 			    		}
 			    	    break;	  
 			    }
-			   
-			
 			}
 			else if(employeeOption==2){
 				System.out.println("1.LOGIN\n2.FORGETPASSWORD");

@@ -13,9 +13,7 @@ public class Reservation{
 	List<PassengerDetails> gettingPassengerInfo(int busCapacity,int busNo, String time, String date) {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter number of seats required");
-		int noOfSeatsRequired=sc.nextInt();
-		
-		
+		int noOfSeatsRequired=sc.nextInt();	
 		sc.nextLine();
 		List<PassengerDetails>passengerDetails=new ArrayList<>();
 		if(checkingAvailability(busCapacity,noOfSeatsRequired)) {

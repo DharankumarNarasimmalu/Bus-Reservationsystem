@@ -69,16 +69,17 @@ public class Transaction{
 
 	public List<PassengerDetails> ticketCancellation(List<PassengerDetails> busAndPassengerDetails) {
 		Scanner sc=new Scanner(System.in);
-		int numberOfTicket=0;
+		int index=0;
 		float amount=0;
 		System.out.println("Enter bus number");
 		int busNo=sc.nextInt();
+		sc.nextLine();
 		System.out.println("Enter name");
 		String name =sc.nextLine();
 		for(PassengerDetails passenger:busAndPassengerDetails) {
-			if(busNo== passenger.getBusNo() && name.equals(passenger.getName())){
-				busAndPassengerDetails.remove(passenger);
-				numberOfTicket+=1;
+			if(busNo==passenger.getBusNo() && name.equals(passenger.getName())){
+//				busAndPassengerDetails.remove(passenger);
+				index=busAndPassengerDetails.indexOf(passenger);
 				if(busNo==123) {
 					amount+=500;
 				}
@@ -90,12 +91,18 @@ public class Transaction{
 				}
 			}
 		}
+		busAndPassengerDetails.remove(index);
 		refund(amount);
 		return busAndPassengerDetails;
 		
 	}
 	public void refund(float amount) {
+		if(amount>0) {
 		System.out.println("Rs."+amount+" is transfered to your account");
+		}
+		else {
+			System.out.println("no such name or bus no found");
+		}
 	}
 	public float []billPayment(float amount,int noOfPassenger) {
 		

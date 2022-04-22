@@ -116,7 +116,10 @@ public class BusAdmin extends Authentication{
 			if(busNumber==passengerDetails.getBusNo()) {
 				passengerDetails.showDetails();
 			}
-		}	
+		}
+		if(passenger.size()==0) {
+			System.out.println("no passenger available");
+		}
 	}
 	public void setEmployeeDetails() {
 		System.out.println("1.DRIVER\n2.SUPERVISOR");
@@ -175,7 +178,7 @@ public class BusAdmin extends Authentication{
 			int id=sc.nextInt();	
 			boolean continuity=true;
 			while(continuity) {
-				System.out.println("\"1.CHANGE NAME\n2.CHANGE AGE\n3.CHANGE MAILID\n4.CHANGE ADDRESS\n5.CHANGE SALARY\n6.CHANGE EXPERIENCE\n7.CHANGE REMARKS\n8.SAVE CHANGES");
+				System.out.println("1.CHANGE NAME\n2.CHANGE AGE\n3.CHANGE MAILID\n4.CHANGE ADDRESS\n5.CHANGE SALARY\n6.CHANGE EXPERIENCE\n7.CHANGE REMARKS\n8.SAVE CHANGES");
 				int changingOption=sc.nextInt();
 				sc.nextLine();
 				switch(changingOption) {
@@ -219,7 +222,7 @@ public class BusAdmin extends Authentication{
 		}
 	}
 	public void viewEmployeeInfo() {
-		System.out.println("1.ALL DETAILS/n2.DRIVER DETAILS/N3.CLEANER DETAILS/n4.SUPERVISOR DETAILS");
+		System.out.println("1.ALL DETAILS\n2.DRIVER DETAILSn3.SUPERVISOR DETAILS");
 		Scanner sc=new Scanner(System.in);
 		int option=sc.nextInt();
 		sc.nextLine();
