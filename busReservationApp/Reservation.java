@@ -81,13 +81,14 @@ public class Reservation{
 				busAvailability.get(busNo).showBusDetails();
 			}			
 		}
+		List<PassengerDetails> passengerDetailsOfChoosedBus=new ArrayList<>();
 		if( !availableBus){
-			return null;
+			return passengerDetailsOfChoosedBus;
 		}
 		System.out.println("Enter bus no for booking");
 		int busNumber=sc.nextInt();
 		int busCapacity=busAvailability.get(busNumber).getNoOFSeats();
-		List<PassengerDetails> passengerDetailsOfChoosedBus=gettingPassengerInfo(busCapacity,busNumber,busAvailability.get(busNumber).getTime(),busAvailability.get(busNumber).getDate());
+		passengerDetailsOfChoosedBus=gettingPassengerInfo(busCapacity,busNumber,busAvailability.get(busNumber).getTime(),busAvailability.get(busNumber).getDate());
 		busAvailability.get(busNumber).setNoOFSeats(busCapacity-passengerDetailsOfChoosedBus.size());
 		return passengerDetailsOfChoosedBus;
 

@@ -18,7 +18,6 @@ public class BusAdmin extends Authentication{
 		super.password=password;
 		super.mail=mail;	
 		}
-
 	public BusAdmin(Map<String, String> passengerComplaint, List<PassengerDetails> busAndPassengerDetails,
 			Map<Integer, Driver> driverDetails, Map<Integer, Supervisor> supervisorDetails) {
 		this.customerComplaint.putAll(passengerComplaint);

@@ -19,7 +19,7 @@ public class Authentication{
 	}	
 	public void logout() {
 		System.out.println("Thanking of choosing out service");
-		System.out.println("1.REMEMBER PASSWORD/n2.EXIT");
+		System.out.println("1.REMEMBER PASSWORD\n2.EXIT");
 		Scanner sc=new Scanner(System.in);
 		int option=sc.nextInt();
 		switch(option) {

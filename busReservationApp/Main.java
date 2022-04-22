@@ -95,7 +95,7 @@ public class Main {
 				            switch(userfunction) {
 				            case(1):
 					        	busAndPassengerDetails=booking.searchBus(busAvailability);
-				                if(busAndPassengerDetails==null) {
+				                if(busAndPassengerDetails.size()==0) {
 				                	System.out.println("NO BUS AVAILABLE");
 				                	continue;
 				                }
