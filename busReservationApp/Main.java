@@ -416,6 +416,7 @@ public class Main {
 		    		while(true) {
 		    		    System.out.println("verify phone number");
 		    		    long phoneNumberVerify=sc.nextLong();
+		    		    sc.nextLine();
 		    		    System.out.println("verify mail id");
 		    		    String mailId=sc.nextLine();
 		    		    if(phoneNumberVerify==phNo && mail.equals(mailId)) {
